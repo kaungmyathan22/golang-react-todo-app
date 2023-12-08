@@ -6,6 +6,13 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+type Todo struct {
+	ID    int    `json:"id"`
+	Title int    `json:"title"`
+	Done  bool   `json:"done"`
+	Body  string `json:"body"`
+}
+
 func main() {
 	fmt.Println("Hello world")
 	app := fiber.New()
