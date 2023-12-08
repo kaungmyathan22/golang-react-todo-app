@@ -51,6 +51,9 @@ func main() {
 		})
 		return nil
 	})
-	app.Use(cors.Config{})
+	app.Use(cors.Config{
+		AllowOrigins: "http://localhost:3000",
+		AllowHeaders: "Origin, Content-Type, Accept",
+	})
 	app.Listen(":8080")
 }
